@@ -1,14 +1,32 @@
-abstract class CharacterComponent {
-  element: Element;
+import { type CharacterData } from "../../types";
+import Component from "../Component/Component";
 
-  constructor(parentElement: Element, tag: string, className = "") {
-    this.element = document.createElement(tag);
-    this.element.className = className;
+class CharacterComponent extends Component {
+  characterData: CharacterData;
 
-    parentElement.append(this.element);
+  constructor(parentElement: Element, characterData: CharacterData) {
+    super(parentElement, "article", "character");
+
+    this.characterData = characterData;
   }
 
-  abstract render(): void;
+  render() {
+    this.element.innerHTML = `
+    <div class="card character__card">
+            <img src="${this.characterData.imageSource}" alt="${this.characterData.name} and ${this.characterData.family}" class="character__picture card-img-top" />
+            <div class="card-body">
+              <h2 class="character__name card-title h4">${this.characterData.name} ${this.characterData.family}</h2>
+              <div class="character__info">
+                <ul class="list-unstyled">
+                  <li>Age: ${this.characterData.age}</li>
+                  <li>
+                    State:
+                    <i class="fas fa-thumbs-down"></i>
+                    <i class="fas fa-thumbs-up"></i>
+                  </li>
+                </ul>
+              </div>`;
+  }
 }
 
 export default CharacterComponent;

@@ -8,14 +8,14 @@ export class Fighter extends Character {
   constructor(characterData: CharacterData, weapon: string, dexterity: number) {
     super(characterData);
     this.weapon = weapon;
-    this.dexterity = this.filterDexterity(dexterity);
+    this.dexterity = this.#filterDexterity(dexterity);
   }
 
   communicate() {
     return `${super.communicate()}First I hit and then I ask`;
   }
 
-  filterDexterity(dexterity: number) {
+  #filterDexterity(dexterity: number) {
     if (dexterity < 0) {
       return 0;
     }

@@ -3,7 +3,7 @@ import {
   daenerysCharacterData,
   jaimeCharacterData,
   joffreyCharacterData,
-} from "../data/index.js";
+} from "../data/index";
 import { Fighter } from "./Fighter/Fighter.js";
 import { King } from "./King/King.js";
 import { Squire } from "./Squire/Squire.js";

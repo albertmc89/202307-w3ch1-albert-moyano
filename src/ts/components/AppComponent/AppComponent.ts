@@ -1,8 +1,4 @@
-import {
-  jaimeCharacterData,
-  joffreyCharacterData,
-  tyrionCharacterData,
-} from "../../data/index.js";
+import { characters } from "../../characters/characters.js";
 import CharacterComponent from "../Component/CharacterComponent/CharacterComponent.js";
 import Component from "../Component/Component.js";
 
@@ -23,19 +19,19 @@ class AppComponent extends Component {
 
     const kingComponent = new CharacterComponent(
       characterListElement,
-      joffreyCharacterData
+      characters[0]
     );
     kingComponent.render();
 
     const fighterComponent = new CharacterComponent(
       characterListElement,
-      jaimeCharacterData
+      characters[1]
     );
     fighterComponent.render();
 
     const squireComponent = new CharacterComponent(
       characterListElement,
-      tyrionCharacterData
+      characters[2]
     );
     squireComponent.render();
   }

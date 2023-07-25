@@ -7,13 +7,14 @@ class CharacterComponent extends Component {
   character;
 
   constructor(parentElement: Element, character: King | Fighter | Squire) {
-    super(parentElement, "article", "character");
+    super(parentElement, "li", "col");
 
     this.character = character;
   }
 
   render() {
     this.element.innerHTML = `
+    <article class="character">
     <div class="card character__card">
       <img src="img/${this.character.characterData.imageSource}" alt="${this.character.characterData.name} and ${this.character.characterData.family}" class="character__picture card-img-top" />
       <div class="card-body">
@@ -27,7 +28,9 @@ class CharacterComponent extends Component {
               <i class="fas fa-thumbs-up"></i>
             </li>
           </ul>
-        </div>`;
+        </div>
+        </article>
+        `;
   }
 }
 

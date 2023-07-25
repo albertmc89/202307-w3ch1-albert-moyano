@@ -1,6 +1,6 @@
-import { type CharacterData } from "../../types";
-import Character from "../Character/Character";
-import { Fighter } from "../Fighter/Fighter";
+import { type CharacterData } from "../../types.js";
+import Character from "../Character/Character.js";
+import { Fighter } from "../Fighter/Fighter.js";
 
 export class Squire extends Character {
   kissAssLevel;

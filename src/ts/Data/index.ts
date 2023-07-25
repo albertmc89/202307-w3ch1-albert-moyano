@@ -4,21 +4,21 @@ export const joffreyCharacterData: CharacterData = {
   name: "Joffrey",
   family: "Baratheon",
   age: 16,
-  imageSource: "joffrey.jpg",
+  imageSource: "img/joffrey.jpg",
 };
 
 export const jaimeCharacterData: CharacterData = {
   name: "Jaime",
   family: "Lannister",
   age: 45,
-  imageSource: "jaime.jpg",
+  imageSource: "img/jaime.jpg",
 };
 
 export const daenerysCharacterData: CharacterData = {
   name: "Daenerys",
   family: "Targaryen",
   age: 30,
-  imageSource: "daenerys.jpg",
+  imageSource: "img/daenerys.jpg",
 };
 
 export const tyrionCharacterData: CharacterData = {

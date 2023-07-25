@@ -1,24 +1,26 @@
-import { type CharacterData } from "../../../types.js";
+import { type Fighter } from "../../../characters/Fighter/Fighter.js";
+import { type King } from "../../../characters/King/King.js";
+import { type Squire } from "../../../characters/Squire/Squire.js";
 import Component from "../Component.js";
 
 class CharacterComponent extends Component {
-  characterData: CharacterData;
+  character;
 
-  constructor(parentElement: Element, characterData: CharacterData) {
+  constructor(parentElement: Element, character: King | Fighter | Squire) {
     super(parentElement, "article", "character");
 
-    this.characterData = characterData;
+    this.character = character;
   }
 
   render() {
     this.element.innerHTML = `
     <div class="card character__card">
-      <img src="${this.characterData.imageSource}" alt="${this.characterData.name} and ${this.characterData.family}" class="character__picture card-img-top" />
+      <img src="${this.character.characterData.imageSource}" alt="${this.character.characterData.name} and ${this.character.characterData.family}" class="character__picture card-img-top" />
       <div class="card-body">
-        <h2 class="character__name card-title h4">${this.characterData.name} ${this.characterData.family}</h2>
+        <h2 class="character__name card-title h4">${this.character.characterData.name} ${this.character.characterData.family}</h2>
         <div class="character__info">
           <ul class="list-unstyled">
-            <li>Age: ${this.characterData.age}</li>
+            <li>Age: ${this.character.characterData.age}</li>
             <li>
               State:
               <i class="fas fa-thumbs-down"></i>

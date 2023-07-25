@@ -1,6 +1,6 @@
-import { type CharacterData } from "../../types";
+import { type CharacterData } from "../../types.js";
 
-abstract class Character {
+class Character {
   isAlive = true;
   series = "Game of Thrones";
   characterData;

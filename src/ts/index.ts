@@ -1,6 +1,7 @@
-import { joffreyCharacterData } from "./Data";
+import AppComponent from "./components/AppComponent/AppComponent.js";
 
-const characterElement = document.querySelector(".character")!;
+const characterContainer = document.querySelector(".container")!;
 
-const characterImage = characterElement.querySelector(".character__card");
-(characterImage as HTMLImageElement).src = joffreyCharacterData.imageSource;
+const containerComponent = new AppComponent(characterContainer);
+
+containerComponent.render();

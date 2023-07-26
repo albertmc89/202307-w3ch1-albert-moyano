@@ -38,10 +38,10 @@ class CharacterComponent extends Component {
             <li>Advises to: X</li>
             <li>Serves to: X</li>
           </ul>
-        </div>
-        <div class="character__actions">
+                  <div class="character__actions">
           <button class="character__action btn">speak</button>
           <button class="character__action btn">die</button>
+        </div>
         </div>
      </div>
     </div>

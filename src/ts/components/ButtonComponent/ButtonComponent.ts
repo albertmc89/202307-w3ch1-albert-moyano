@@ -9,10 +9,15 @@ class ButtonComponent extends Component {
 
     this.text = text;
     this.actionOnClick = actionOnClick;
+    this.listenEvents();
   }
 
   render() {
     this.element.textContent = this.text;
+  }
+
+  listenEvents() {
+    this.element.addEventListener("click", this.actionOnClick);
   }
 }
 

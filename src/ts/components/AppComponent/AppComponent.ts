@@ -1,4 +1,5 @@
 import { characters } from "../../characters/characters.js";
+import ButtonComponent from "../ButtonComponent/ButtonComponent.js";
 import CharacterComponent from "../Component/CharacterComponent/CharacterComponent.js";
 import Component from "../Component/Component.js";
 
@@ -32,6 +33,16 @@ class AppComponent extends Component {
       characters[2]
     );
     squireComponent.render();
+
+    const dieButtonComponent = new ButtonComponent(
+      characterListElement,
+      "die",
+      () => {
+        this.element.querySelector(".character__action")?.die();
+      }
+    );
+
+    dieButtonComponent.render();
   }
 }
 
